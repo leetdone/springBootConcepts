@@ -3,16 +3,16 @@ package com.example.springCoreDemo.common;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
-@Lazy
 @Component
-public class CricketCoach implements Coach {
+@Lazy
+public class TennisCoach implements Coach{
 
-    public CricketCoach() {
-        System.out.println("In constructor" + getClass().getSimpleName());
+    public TennisCoach() {
+        System.out.println("In construction" + getClass().getName());
     }
 
     @Override
     public String getDailyWorkout() {
-        return "Practice bowling for 15 minutes!?!";
+        return "tennis is running";
     }
 }
