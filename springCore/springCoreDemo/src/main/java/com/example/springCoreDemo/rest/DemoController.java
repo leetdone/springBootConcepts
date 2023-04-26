@@ -7,14 +7,17 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Lazy
+//@Lazy
 @RestController
 public class DemoController {
     private Coach myCoach;
 
+
+
+
     //anything will be injected bks of the autowired
     @Autowired
-    public void seCoach(@Qualifier("tennisCoach") Coach theCoach){
+    public void seCoach(@Qualifier("MrBean") Coach theCoach){
         myCoach = theCoach;
     }
 
@@ -22,4 +25,9 @@ public class DemoController {
     public String getDailyWorkout(){
         return myCoach.getDailyWorkout();
     }
+
+//    @GetMapping("/check")
+//    public String check(){
+//        return "Comparingin \n" + (myCoach == anotherCoach);
+//    }
 }

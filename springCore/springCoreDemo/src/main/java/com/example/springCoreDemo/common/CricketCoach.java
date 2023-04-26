@@ -3,7 +3,7 @@ package com.example.springCoreDemo.common;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
-@Lazy
+//@Lazy
 @Component
 public class CricketCoach implements Coach {
 
